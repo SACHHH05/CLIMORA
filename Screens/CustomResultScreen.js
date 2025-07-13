@@ -69,7 +69,7 @@ export default function CustomResultScreen({ route, navigation }) {
       };
 
       try {
-        const res = await fetch('http://172.20.10.3:5000/weather', {
+        const res = await fetch('http://add your ipv4:5000/weather', {
 
           method: 'POST',
           headers: { 'Content-Type': 'application/json' },
