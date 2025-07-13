@@ -44,9 +44,3 @@ Climora is your all-in-one mobile app for weather forecasts, rainfall reports, s
 - RESTful POST endpoints
 
 ---
-
-
---
-
-
-
