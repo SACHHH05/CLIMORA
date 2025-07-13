@@ -1,7 +1,7 @@
 # C L I M O R A  
 
 
-Climora is your all-in-one mobile app for weather forecasts, rainfall reports, satellite imagery, and soil properties — all in a clean and intuitive interface. Built with ❤️ using React Native and Flask, Climora helps users make informed decisions for agriculture, gardening, or just vibing with the climate around them.
+Climora is your all-in-one mobile app for weather forecasts, rainfall reports, satellite imagery, and soil properties — all in a clean and intuitive interface. Built with using React Native and Flask, Climora helps users make informed decisions for agriculture, gardening, or just vibing with the climate around them.
 
 ---
 
