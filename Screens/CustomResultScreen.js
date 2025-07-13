@@ -111,7 +111,7 @@ export default function CustomResultScreen({ route, navigation }) {
 
   const satelliteUrl = satellite.image_url?.startsWith('http')
     ? satellite.image_url
-    : `http://172.20.10.3:5000${satellite.image_url || ''}`;
+    : `http://add your ipv4.3:5000${satellite.image_url || ''}`;
 
   const renderWeekSection = (title, data, isCurrent = false) =>
   data.length > 0 ? (
