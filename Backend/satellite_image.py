@@ -2,7 +2,8 @@
 import requests
 import os
 
-GOOGLE_API_KEY = "AIzaSyDCniccFISBOmTp4szMHZ3JSZ_Iyzfqidk"  # 🔁 Replace this with your real key
+GOOGLE_API_KEY = "YOUR API"  
+  
 
 def generate_satellite_image(lat, lon, date):
     zoom = 19 # 🔍 Zoom level: 17–19 works well
