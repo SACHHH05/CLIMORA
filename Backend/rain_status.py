@@ -1,11 +1,11 @@
 import requests
 import datetime
 
-API_KEY = "PG6HXMUZTJCLQBRUKBGVBRC9N"  # Visual Crossing API key
+API_KEY = "YOUR API"  
 
 def get_coordinates(place_name):
     try:
-        url = f"https://nominatim.openstreetmap.org/search?format=json&q={place_name}"
+        url = f"/search?format=json&q={place_name}"
         res = requests.get(url, headers={"User-Agent": "weather-app"}).json()
         if res:
             return float(res[0]["lat"]), float(res[0]["lon"]), res[0]["display_name"]
@@ -32,7 +32,7 @@ def get_rainfall_report(lat, lon, place_name, base_date):
 
     for i in range(3, 0, -1):
         day = base_date - datetime.timedelta(days=i)
-        url = f"https://weather.visualcrossing.com/VisualCrossingWebServices/rest/services/timeline/{lat},{lon}/{day}?unitGroup=metric&key={API_KEY}&include=days"
+        url = f"/{lat},{lon}/{day}?unitGroup=metric&key={API_KEY}&include=days"
         try:
             res = requests.get(url).json()
             rain = res["days"][0].get("precip", None)
@@ -58,7 +58,7 @@ def get_rainfall_report(lat, lon, place_name, base_date):
             })
 
     # Today's rainfall
-    url_today = f"https://weather.visualcrossing.com/VisualCrossingWebServices/rest/services/timeline/{lat},{lon}/{base_date}?unitGroup=metric&key={API_KEY}&include=days"
+    url_today = f"/{lat},{lon}/{base_date}?unitGroup=metric&key={API_KEY}&include=days"
     try:
         res = requests.get(url_today).json()
         rain_today = res["days"][0].get("precip", None)
